@@ -21,8 +21,6 @@ public class AbilityAsset : ScriptableObject {
 
 	//since Bufflist buff is an enum, calling method should use enum.GetName() to convert the enum to its string text, so we can use gameObject.AddComponent(System.Type.GetType(buffName));
 
-
-
 	[Header("Ability Debuffs")]
 	public List<AbilityDebuffs> abilityDebuffs;
 
