@@ -23,6 +23,7 @@ MonoBehaviour:
   - abilityName: Essence Explosion
     skillType: 0
     icon: {fileID: 21300000, guid: 035732fb550eed24fafaaa35c2a2471c, type: 3}
+    skillPreview: {fileID: 21300000, guid: ff467e74e5f6b5d4fbac1b5c37db18c7, type: 3}
     description: Essence Explosion
     abilityEffect: AttackSkill
     abilityCoolDown: 0
@@ -32,6 +33,7 @@ MonoBehaviour:
   - abilityName: Frost Rush
     skillType: 0
     icon: {fileID: 21300000, guid: 08ee8a92408b1094f94a7c52aea6225b, type: 3}
+    skillPreview: {fileID: 21300000, guid: ff467e74e5f6b5d4fbac1b5c37db18c7, type: 3}
     description: Frost Rush
     abilityEffect: SpecialSkill
     abilityCoolDown: 3
@@ -41,6 +43,7 @@ MonoBehaviour:
   - abilityName: Storm of Midnight
     skillType: 0
     icon: {fileID: 21300000, guid: 165c2d6355168cc4c8a7aaf74efdeacb, type: 3}
+    skillPreview: {fileID: 21300000, guid: ff467e74e5f6b5d4fbac1b5c37db18c7, type: 3}
     description: Storm of Midnight
     abilityEffect: UltimateSkill
     abilityCoolDown: 6
