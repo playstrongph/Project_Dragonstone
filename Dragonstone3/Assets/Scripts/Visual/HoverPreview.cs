@@ -11,6 +11,10 @@ public class HoverPreview: MonoBehaviour
     public Vector3 TargetPosition;
     public float TargetScale;
     public GameObject previewGameObject;
+    public GameObject skillCostText;
+    public GameObject skillDescriptionText;
+
+
     public bool ActivateInAwake = false;
 
     // PRIVATE FIELDS

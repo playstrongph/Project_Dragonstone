@@ -76,9 +76,8 @@ GameObject:
   - component: {fileID: 224848028891354492}
   - component: {fileID: 222200814647963172}
   - component: {fileID: 114192843821990892}
-  - component: {fileID: 114087135955245676}
   m_Layer: 5
-  m_Name: SkillCostText
+  m_Name: SkillDescription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,6 +96,24 @@ GameObject:
   - component: {fileID: 114706407729900598}
   m_Layer: 5
   m_Name: SkillCDText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1808913667739384
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224989627609413962}
+  - component: {fileID: 222442180033707098}
+  - component: {fileID: 114037113963388902}
+  - component: {fileID: 114087135955245676}
+  m_Layer: 5
+  m_Name: SkillCostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,12 +144,45 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100.941475, y: 100.038765}
   m_EdgeRadius: 0
+--- !u!114 &114037113963388902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808913667739384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 9d6cb7c08650a5c499a20b71976f7278, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 14
+    m_MaxSize: 81
+    m_Alignment: 4
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 5
 --- !u!114 &114087135955245676
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1246812203965570}
+  m_GameObject: {fileID: 1808913667739384}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e90d888d01c90e42aeebd9bef8befce, type: 3}
@@ -197,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -205,19 +255,19 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9d6cb7c08650a5c499a20b71976f7278, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 14
-    m_MaxSize: 81
+    m_MinSize: 5
+    m_MaxSize: 18
     m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: Storm of Midnight description.
 --- !u!114 &114295947720170932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -348,6 +398,8 @@ MonoBehaviour:
   TargetPosition: {x: 0, y: 400, z: 0}
   TargetScale: 6
   previewGameObject: {fileID: 1035878240908508}
+  skillCostText: {fileID: 1808913667739384}
+  skillDescriptionText: {fileID: 1246812203965570}
   ActivateInAwake: 1
 --- !u!114 &114980270115002212
 MonoBehaviour:
@@ -389,6 +441,13 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1246812203965570}
+  m_CullTransparentMesh: 0
+--- !u!222 &222442180033707098
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808913667739384}
   m_CullTransparentMesh: 0
 --- !u!222 &222484110754580820
 CanvasRenderer:
@@ -457,6 +516,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.9998949, z: 1}
   m_Children:
+  - {fileID: 224989627609413962}
   - {fileID: 224848028891354492}
   m_Father: {fileID: 224896562690914838}
   m_RootOrder: 2
@@ -474,15 +534,15 @@ RectTransform:
   m_GameObject: {fileID: 1246812203965570}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2596904, y: 0.22533983, z: 1}
+  m_LocalScale: {x: 0.23566304, y: 0.23654568, z: 1}
   m_Children: []
   m_Father: {fileID: 224841116421053952}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 15.704998, y: -11.73}
-  m_SizeDelta: {x: 66.5, y: 74.6}
+  m_AnchorMin: {x: 0.21744041, y: 0.119}
+  m_AnchorMax: {x: 0.732594, y: 0.32500002}
+  m_AnchoredPosition: {x: 0.04018593, y: 0.28207016}
+  m_SizeDelta: {x: 143.0059, y: 66.91527}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224896562690914838
 RectTransform:
@@ -504,4 +564,22 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 273.8247, y: -84.94527}
   m_SizeDelta: {x: 547.6494, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224989627609413962
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808913667739384}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2596904, y: 0.22533983, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224841116421053952}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.078, y: 0.7972159}
+  m_AnchorMax: {x: 0.28129596, y: 0.96466005}
+  m_AnchoredPosition: {x: 0.22515488, y: 0.18055344}
+  m_SizeDelta: {x: 48.95412, y: 57.884937}
   m_Pivot: {x: 0.5, y: 0.5}
