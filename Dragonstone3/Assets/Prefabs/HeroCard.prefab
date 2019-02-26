@@ -1100,6 +1100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroAsset: {fileID: 11400000, guid: 8f3e82be82034594999b244855d6bce4, type: 2}
   PreviewManager: {fileID: 0}
+  isCardPreview: 0
   DefenseText: {fileID: 114149762659294694}
   ShieldText: {fileID: 114055964197851344}
   HealthText: {fileID: 114820542631347696}
