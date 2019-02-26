@@ -130,14 +130,14 @@ public class HeroCardManager : MonoBehaviour {
            SkillButtons[i].image.sprite = heroAsset.abilityAsset2[i].icon;
            SkillCDTexts[i].text = heroAsset.abilityAsset2[i].abilityCoolDown.ToString();
 
-           //set the preview
-           
+           //set the Preview Image and Mana-Cost           
            Image skillPreview = SkillButtons[i].GetComponent<HoverPreview>().previewGameObject.GetComponent<Image>();
-
-
            skillPreview.sprite = heroAsset.abilityAsset2[i].skillPreview;
-           //skillPreview.SetNativeSize();
+           //skillPreview.SetNativeSize();           
+           SkillButtons[i].GetComponent<HoverPreview>().previewGameObject.GetComponentInChildren<Text>().text = heroAsset.abilityAsset2[i].abilityCoolDown.ToString();
            skillPreview.preserveAspect = true;
+
+
 
            //SkillButtons[i].GetComponentInChildren<SkillButtonPreview>().gameObject.SetActive(false);
         }
