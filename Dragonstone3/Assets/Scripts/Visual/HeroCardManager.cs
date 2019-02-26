@@ -59,11 +59,9 @@ public class HeroCardManager : MonoBehaviour {
     {
         if (heroAsset != null)
 
-            if(!isCardPreview){
+            if(!isCardPreview)
                 ReadHeroFromAsset();
-            } else {
-                ReadHeroFromAssetPreview();
-            }
+           
 
             
     }
@@ -140,28 +138,5 @@ public class HeroCardManager : MonoBehaviour {
         }
     }//ReadHeroFromAsset
 
-    public void ReadHeroFromAssetPreview()
-    {
-        
-        //ASSIGN VALUES FROM SO
-        //Text values
-        this.name = heroAsset.heroName;
-        DefenseText.text = heroAsset.defense.ToString();
-        HealthText.text = heroAsset.maxHealth.ToString();
-        AttackText.text = heroAsset.attack.ToString();
-        //PortraitText.text = heroAsset.heroName;
-
-        //Image sprites
-        AvatarImage.sprite = heroAsset.heroAvatar;
-
-
-        //used for hero previews
-        if (PreviewManager != null)
-        {
-            // this is a card and not a preview
-            // Preview GameObject will have OneCardManager as well, but PreviewManager should be null there
-            PreviewManager.heroAsset = heroAsset;
-            PreviewManager.ReadHeroFromAsset();
-        }
-    }//ReadHeroFromAsset
+   
 }
