@@ -28,6 +28,7 @@ public class AbilityAsset2 {
 	//public Ability abilityScript;
 	public Type skillType;
 	public Sprite icon;
+	public Sprite skillPreview;
 
 	[TextArea(5,10)]
 	public string description;

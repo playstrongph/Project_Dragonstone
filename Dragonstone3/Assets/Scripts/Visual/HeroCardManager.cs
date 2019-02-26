@@ -42,6 +42,7 @@ public class HeroCardManager : MonoBehaviour {
     [Header("Button References")]
     public List<Button> SkillButtons;
     public List<Text> SkillCDTexts;
+    private List<SkillButtonPreview> SkillButtonPreviews;
     
 
 
@@ -50,6 +51,9 @@ public class HeroCardManager : MonoBehaviour {
     public GameObject BuffUI;
     public GameObject SkillsUI;
     public Button SkillButton;
+    
+
+
 
 
     
@@ -125,6 +129,14 @@ public class HeroCardManager : MonoBehaviour {
         for(int i = 0; i < skillButtonCount; i++){
            SkillButtons[i].image.sprite = heroAsset.abilityAsset2[i].icon;
            SkillCDTexts[i].text = heroAsset.abilityAsset2[i].abilityCoolDown.ToString();
+
+           //set the preview
+           Image skillPreview = SkillButtons[i].GetComponentInChildren<SkillButtonPreview>().GetComponent<Image>();
+           skillPreview.sprite = heroAsset.abilityAsset2[i].skillPreview;
+           //skillPreview.SetNativeSize();
+           skillPreview.preserveAspect = true;
+
+           SkillButtons[i].GetComponentInChildren<SkillButtonPreview>().gameObject.SetActive(false);
         }
 
       
