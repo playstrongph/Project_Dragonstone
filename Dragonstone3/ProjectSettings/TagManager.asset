@@ -53,6 +53,9 @@ TagManager:
   - name: SkillCanvas
     uniqueID: 3663971733
     locked: 0
+  - name: SkillButtonCanvas
+    uniqueID: 2993744379
+    locked: 0
   - name: AboveEverything
     uniqueID: 1064983991
     locked: 0
