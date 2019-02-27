@@ -41,9 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1557730745
+    locked: 0
   - name: HeroCanvas
     uniqueID: 3102370725
     locked: 0
   - name: BuffCanvas
     uniqueID: 1546420665
+    locked: 0
+  - name: SkillCanvas
+    uniqueID: 3663971733
+    locked: 0
+  - name: AboveEverything
+    uniqueID: 1064983991
     locked: 0
