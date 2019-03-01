@@ -276,7 +276,7 @@ MonoBehaviour:
   SpacingX: 11.8
   SpacingY: 0
   ExpandHorizontalSpacing: 1
-  ChildForceExpandWidth: 1
+  ChildForceExpandWidth: 0
   ChildForceExpandHeight: 1
 --- !u!114 &114411569977105028
 MonoBehaviour:
@@ -458,7 +458,7 @@ Canvas:
   m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
