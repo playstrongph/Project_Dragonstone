@@ -91,8 +91,11 @@ public class HeroCardManager : MonoBehaviour {
     {
 
         //FORM HERO GAMEOBJECT STRUCTURE FIRST
-        SkillsUI = Instantiate(SkillsUI);
-        SkillsUI.transform.SetParent(this.transform);
+        
+        
+        SkillsUI = Instantiate(SkillsUI, transform.parent);
+
+        //SkillsUI.transform.SetParent(this.transform);
 
         int skillButtonCount = heroAsset.abilityAsset2.Count;
 
@@ -101,6 +104,7 @@ public class HeroCardManager : MonoBehaviour {
         GameObject skillButtonParent = GameObject.Find("SkillButtonPanel");
 
         for(int i = 0; i < skillButtonCount; i++){
+
             Button temp = Instantiate(SkillButton, skillButtonParent.transform); 
             SkillCDTexts.Add(temp.GetComponentInChildren<Text>());
             SkillButtons.Add(temp);            
