@@ -276,7 +276,7 @@ MonoBehaviour:
   SpacingX: 11.8
   SpacingY: 0
   ExpandHorizontalSpacing: 1
-  ChildForceExpandWidth: 0
+  ChildForceExpandWidth: 1
   ChildForceExpandHeight: 1
 --- !u!114 &114411569977105028
 MonoBehaviour:
