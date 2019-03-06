@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4161093262703348}
   - component: {fileID: 114368529756735432}
   - component: {fileID: 114985893622937120}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HeroCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 61710923072680964}
   - component: {fileID: 114910203927864478}
   - component: {fileID: 114497793315461574}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HeroBuffUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4316044415580584}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BuffsUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4472893319064614}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HeroUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4393178965558002}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: FacePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,7 +421,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1207330935054098}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

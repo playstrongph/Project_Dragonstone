@@ -9,6 +9,9 @@ public class DragOnTargetTest : DraggingActionsTest
     private LineRenderer lr;
     private Transform triangle;
     private SpriteRenderer triangleSR;
+    public float const1 = 1;
+    public float const2 = 1;
+    public float const3 = 1;
 
     void Awake()
     {
@@ -21,7 +24,7 @@ public class DragOnTargetTest : DraggingActionsTest
 
     public override void OnStartDrag()
     {
-        sr.enabled = true;
+        //sr.enabled = true;
         lr.enabled = true;
     }
 
@@ -29,17 +32,20 @@ public class DragOnTargetTest : DraggingActionsTest
     {
         // This code only draws the arrow
         Vector3 notNormalized = transform.position - transform.parent.position;
+
         Vector3 direction = notNormalized.normalized;
-        float distanceToTarget = (direction*2.3f).magnitude;
+        float distanceToTarget = (direction*const1).magnitude;
         if (notNormalized.magnitude > distanceToTarget)
         {
             // draw a line between the creature and the target
-            lr.SetPositions(new Vector3[]{ transform.parent.position, transform.position - direction*2.3f });
-            lr.enabled = true;
+             lr.enabled = true;
+
+            lr.SetPositions(new Vector3[]{ transform.parent.position, transform.position - direction*const2 });
+           
 
             // position the end of the arrow between near the target.
             triangleSR.enabled = true;
-            triangleSR.transform.position = transform.position - 1.5f*direction;
+            triangleSR.transform.position = transform.position - const3*direction;
 
             // proper rotarion of arrow end
             float rot_z = Mathf.Atan2(notNormalized.y, notNormalized.x) * Mathf.Rad2Deg;
@@ -59,7 +65,8 @@ public class DragOnTargetTest : DraggingActionsTest
         // return target and arrow to original position
         // this position is special for spell cards to show the arrow on top
         transform.localPosition = new Vector3(0f, 0f, 0.1f);
-        sr.enabled = false;
+
+        //sr.enabled = false;
         lr.enabled = false;
         triangleSR.enabled = false;
 

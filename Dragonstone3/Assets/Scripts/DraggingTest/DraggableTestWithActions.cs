@@ -16,11 +16,13 @@ public class DraggableTestWithActions : MonoBehaviour {
 
     // distance from camera to mouse on Z axis 
     private float zDisplacement;
+    public PlayerVisual player;
 
     // MONOBEHAVIOUR METHODS
     void Awake()
     {
         da = GetComponent<DraggingActionsTest>();
+        player = GetComponentInParent<PlayerVisual>();
     }
 
     void OnMouseDown()
@@ -41,7 +43,7 @@ public class DraggableTestWithActions : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        if (dragging)
+        if (player.dragging)
         { 
             Vector3 mousePos = MouseInWorldCoords();
             da.OnDraggingInUpdate();

@@ -95,7 +95,7 @@ public class HeroCardManager : MonoBehaviour {
         
         SkillsUI = Instantiate(SkillsUI, transform.parent);
 
-        //SkillsUI.transform.SetParent(this.transform);
+        SkillsUI.transform.SetParent(this.transform);
 
         int skillButtonCount = heroAsset.abilityAsset2.Count;
 
