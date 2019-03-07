@@ -9,7 +9,7 @@ public class PlayerVisual : MonoBehaviour {
 	public GameObject targetPointer;
 	public GameObject targetPointerGO;
 
-	Button button;
+	DragSource dragSource;
 	GameObject pointerObject;
 
 	public bool dragging = false;
@@ -23,13 +23,13 @@ public class PlayerVisual : MonoBehaviour {
 
 		if (pointerObject != null )
 		{
-				if(pointerObject.gameObject.GetComponent<Button>() != null)
+				if(pointerObject.gameObject.GetComponent<DragSource>() != null && pointerObject.gameObject.GetComponent<DragSource>().canDrag)
 				{				
 					if (Input.GetMouseButtonDown(0))
 					{
-						button = pointerObject.gameObject.GetComponent<Button>();							
-						targetPointerGO = Instantiate(targetPointer, button.gameObject.transform.position, button.gameObject.transform.rotation, button.GetComponentInParent<HeroCardManager>().gameObject.transform);			
-						targetPointerGO.transform.SetParent(button.gameObject.transform);
+						dragSource = pointerObject.gameObject.GetComponent<DragSource>();							
+						targetPointerGO = Instantiate(targetPointer, dragSource.gameObject.transform.position, dragSource.gameObject.transform.rotation, dragSource.GetComponentInParent<HeroManager>().gameObject.transform);			
+						targetPointerGO.transform.SetParent(dragSource.gameObject.transform);
 
 
 

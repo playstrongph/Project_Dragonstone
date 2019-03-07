@@ -5,11 +5,10 @@ using UnityEngine.UI;
 
 // holds the refs to all the Text, Images on the card
 
-public class HeroCardManager : MonoBehaviour {
+public class HeroManager : MonoBehaviour {
 
     public HeroAsset heroAsset;
-    public HeroCardManager PreviewManager;
-    public bool isCardPreview;
+    
 
     [Header("Text Component References")]    
     //Hero UI Text
@@ -24,9 +23,7 @@ public class HeroCardManager : MonoBehaviour {
 
     [Header("Image References")]
     
-    //Hero Panel UI IMages
-    public Image FrontCardBodyImage;
-    public Image BackCardBodyImage;
+    //Hero Panel UI IMages    
     public Image SelectorImage;
     public Image AvatarImage;    
     public Image DefenseImage;
@@ -36,8 +33,7 @@ public class HeroCardManager : MonoBehaviour {
     public Image HeroGlow; 
 
     //Skill Panel UI Images
-    public Image HeroPortrait;
-    
+    public Image HeroPortrait;   
 
     
     [Header("Button References")]
@@ -47,28 +43,14 @@ public class HeroCardManager : MonoBehaviour {
     
 
 
-    [Header("Prefab References")]
-    public GameObject HeroUI;
-    public GameObject BuffUI;
+    [Header("Prefab References")]    
     public GameObject SkillsUI;
     public Button SkillButton;
     
-
-
-
-
     
-    
-
     void Awake()
-    {
-        if (heroAsset != null)
-
-            if(!isCardPreview)
-                ReadHeroFromAsset();
-           
-
-            
+    {       
+        ReadHeroFromAsset();            
     }
 
     private bool heroIsActive = false;
@@ -135,34 +117,9 @@ public class HeroCardManager : MonoBehaviour {
            SkillButtons[i].image.sprite = heroAsset.abilityAsset2[i].icon;
            SkillCDTexts[i].text = heroAsset.abilityAsset2[i].abilityCoolDown.ToString();
 
-           //set the Preview Image and Mana-Cost           
-           Image skillPreview = SkillButtons[i].GetComponent<HoverPreview>().previewGameObject.GetComponent<Image>();
-           skillPreview.sprite = heroAsset.abilityAsset2[i].skillPreview;
-           //skillPreview.SetNativeSize();           
-
-           //Skill Cost
-           SkillButtons[i].GetComponent<HoverPreview>().skillCostText.GetComponent<Text>().text = heroAsset.abilityAsset2[i].abilityCoolDown.ToString();
-
-           //Skill Description
-           SkillButtons[i].GetComponent<HoverPreview>().skillDescriptionText.GetComponent<Text>().text = heroAsset.abilityAsset2[i].description; 
-
-           skillPreview.preserveAspect = true;
-
-
-
-           //SkillButtons[i].GetComponentInChildren<SkillButtonPreview>().gameObject.SetActive(false);
-        }
-
-      
-        //used for hero previews
-        if (PreviewManager != null)
-        {
-            // this is a card and not a preview
-            // Preview GameObject will have OneCardManager as well, but PreviewManager should be null there
-            PreviewManager.heroAsset = heroAsset;
-            PreviewManager.ReadHeroFromAsset();
-        }
+        
+        }     
+        
     }//ReadHeroFromAsset
-
    
 }

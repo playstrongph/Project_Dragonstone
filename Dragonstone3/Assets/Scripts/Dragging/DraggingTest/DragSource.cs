@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillButtonPreview : MonoBehaviour {
+public class DragSource : MonoBehaviour {
 
-	void Awake() {
-		/// <TODO>:  Map to SO Assets
-	}
-	
-	
-	
+	public bool canDrag = true;
+
 	// Use this for initialization
 	void Start () {
 		
