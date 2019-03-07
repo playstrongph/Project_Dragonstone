@@ -3,6 +3,10 @@ using System.Collections;
 
 public abstract class DraggingActions : MonoBehaviour {
 
+    
+    public float distLineRend = 1, distLineTriangle = 1.7f, distTriangleCross = 1.2f;
+
+    
     public abstract void OnStartDrag();
 
     public abstract void OnEndDrag();
@@ -18,6 +22,7 @@ public abstract class DraggingActions : MonoBehaviour {
         }
     }
 
+    
     // protected virtual Player playerOwner
     // {
     //     get{

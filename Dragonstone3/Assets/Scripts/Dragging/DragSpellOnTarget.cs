@@ -4,6 +4,9 @@ using DG.Tweening;
 
 public class DragSpellOnTarget : DraggingActions {
 
+    
+    //public float distLineRend, distLineTriangle, distTriangleCross;
+
     //public TargetingOptions Targets = TargetingOptions.AllCharacters;
     private SpriteRenderer sr;
     private LineRenderer lr;
@@ -52,16 +55,16 @@ public class DragSpellOnTarget : DraggingActions {
         // This code only draws the arrow
         Vector3 notNormalized = transform.position - transform.parent.position;
         Vector3 direction = notNormalized.normalized;
-        float distanceToTarget = (direction*2.3f).magnitude;
+        float distanceToTarget = (direction*distLineRend).magnitude;
         if (notNormalized.magnitude > distanceToTarget)
         {
             // draw a line between the creature and the target
-            lr.SetPositions(new Vector3[]{ transform.parent.position, transform.position - direction*2.3f });
+            lr.SetPositions(new Vector3[]{ transform.parent.position, transform.position - direction*distLineTriangle });
             lr.enabled = true;
 
             // position the end of the arrow between near the target.
             triangleSR.enabled = true;
-            triangleSR.transform.position = transform.position - 1.5f*direction;
+            triangleSR.transform.position = transform.position - distTriangleCross*direction;
 
             // proper rotarion of arrow end
             float rot_z = Mathf.Atan2(notNormalized.y, notNormalized.x) * Mathf.Rad2Deg;

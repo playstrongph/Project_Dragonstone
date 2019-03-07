@@ -201,9 +201,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1473704051301354}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 1.86, z: 0}
-  m_LocalScale: {x: 32.379406, y: 33.878418, z: 0.34731838}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 58.28293, y: 59.28723, z: 0.6079461}
   m_Children:
   - {fileID: 4667669480013060}
   - {fileID: 4325851869078484}
@@ -233,7 +233,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5, y: 2.5}
+  m_Size: {x: 1.4, y: 1.4}
   m_EdgeRadius: 0
 --- !u!114 &114037113963388902
 MonoBehaviour:
@@ -441,7 +441,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b713314ba537a704f89b7d72abab2b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Targets: 4
+  distLineRend: 1
+  distLineTriangle: 1.5
+  distTriangleCross: 1
 --- !u!114 &114534232216440326
 MonoBehaviour:
   m_ObjectHideFlags: 1
