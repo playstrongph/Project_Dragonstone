@@ -42,6 +42,11 @@ public class HeroManagerTest : MonoBehaviour {
     
     public GameObject Buffpanel;
     public GameObject SkillsUI;
+    public GameObject DamageEffectUI;
+    
+    
+    
+
 
     //private List<AbilityAsset2> SkillAssets;
     
@@ -49,6 +54,14 @@ public class HeroManagerTest : MonoBehaviour {
     void Awake()
     {       
         ReadHeroFromAsset();            
+        
+    }
+
+    //Test for DamageEffect
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+            DamageEffectUI.GetComponent<DamageEffect>().CreateDamageEffect(transform.position, Random.Range(-7, 7));
     }
 
     private bool heroIsActive = false;
@@ -116,5 +129,8 @@ public class HeroManagerTest : MonoBehaviour {
 
 
     }//ReadHeroFromAsset
+
+    //Damage Effect Test Script
+    
    
 }

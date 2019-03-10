@@ -23,6 +23,7 @@ public class DamageEffect : MonoBehaviour {
     // The text component to show the amount of damage taken by target like: "-2"
     public Text AmountText;
 
+    
     void Awake()
     {
         // pick a random image
@@ -44,6 +45,7 @@ public class DamageEffect : MonoBehaviour {
         }
         // after the effect is shown it gets destroyed.
         Destroy(this.gameObject);
+        
     }
     /// <summary>
     /// Creates the damage effect.
@@ -52,15 +54,16 @@ public class DamageEffect : MonoBehaviour {
     /// <param name="position">Position.</param>
     /// <param name="amount">Amount.</param>
    
-    public static void CreateDamageEffect(Vector3 position, int amount)
+    public void CreateDamageEffect(Vector3 position, int amount)
     {
         if (amount == 0)
             return;
         // Instantiate a DamageEffect from prefab
 
         //Temp Solution
-        GameObject newDamageEffect = new GameObject();
-        newDamageEffect = GameObject.Instantiate(DamageEffectTest.Instance.DamagePrefab, position, Quaternion.identity) as GameObject;
+        //GameObject newDamageEffect = new GameObject();
+        GameObject newDamageEffect = Instantiate(this.gameObject, position, Quaternion.identity);
+        
 
         //TODO: GameObject newDamageEffect = GameObject.Instantiate(GlobalSettings.Instance.DamageEffectPrefab, position, Quaternion.identity) as GameObject;
         

@@ -2928,7 +2928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df88b741da640e46bc9c45e461da11c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroAsset: {fileID: 0}
+  heroAsset: {fileID: 11400000, guid: 0f4f396abe0dd9543aaea63bef462f47, type: 2}
   DefenseText: {fileID: 114218944630758878}
   ShieldText: {fileID: 114739267834439034}
   HealthText: {fileID: 114368578350343330}
@@ -2954,6 +2954,8 @@ MonoBehaviour:
   - {fileID: 1723081127197234}
   Buffpanel: {fileID: 1441118335228086}
   SkillsUI: {fileID: 1539770689329884}
+  DamageEffectUI: {fileID: 1026471882424468, guid: 78b02188ea022394681d54f2a6101dcf,
+    type: 2}
 --- !u!114 &114509626662819828
 MonoBehaviour:
   m_ObjectHideFlags: 1

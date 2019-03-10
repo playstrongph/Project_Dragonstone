@@ -13,7 +13,7 @@ public class DamageEffectTest : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-            DamageEffect.CreateDamageEffect(transform.position, Random.Range(-7, 7));
+        // if (Input.GetKeyDown(KeyCode.A))
+        //     DamageEffect.CreateDamageEffect(transform.position, Random.Range(-7, 7));
     }
 }
