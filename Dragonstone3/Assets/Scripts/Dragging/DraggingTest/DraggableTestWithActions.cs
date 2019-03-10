@@ -43,7 +43,7 @@ public class DraggableTestWithActions : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        if (player.dragging)
+        if (dragging)
         { 
             Vector3 mousePos = MouseInWorldCoords();
             da.OnDraggingInUpdate();

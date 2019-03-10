@@ -73,6 +73,8 @@ GameObject:
   - component: {fileID: 223060339281670266}
   - component: {fileID: 114044092389094892}
   - component: {fileID: 114061483067450134}
+  - component: {fileID: 61947076622415882}
+  - component: {fileID: 114217245228079878}
   m_Layer: 5
   m_Name: HeroCanvas
   m_TagString: Untagged
@@ -195,9 +197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4835155563745028}
-  - component: {fileID: 114686276608900300}
-  - component: {fileID: 61912464656720320}
-  - component: {fileID: 114685198774718550}
+  - component: {fileID: 114867570264480692}
   m_Layer: 5
   m_Name: Hero
   m_TagString: Untagged
@@ -466,7 +466,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1965786826246966
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
@@ -488,11 +488,11 @@ Transform:
   m_GameObject: {fileID: 1965786826246966}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 200, y: 200, z: 1}
   m_Children:
   - {fileID: 224793729080924622}
-  m_Father: {fileID: 4835155563745028}
-  m_RootOrder: 1
+  m_Father: {fileID: 224391421457124510}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4835155563745028
 Transform:
@@ -505,23 +505,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224391421457124510}
-  - {fileID: 4741131021767456}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61912464656720320
+--- !u!61 &61947076622415882
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1497906050476966}
+  m_GameObject: {fileID: 1096766580379140}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06, y: -0.1}
+  m_Offset: {x: 0, y: -38.624245}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -532,7 +531,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4, y: 2}
+  m_Size: {x: 300, y: 415.0515}
   m_EdgeRadius: 0
 --- !u!114 &114024999096639104
 MonoBehaviour:
@@ -783,6 +782,22 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114217245228079878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1096766580379140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61beda6c273ec16439fcf70cd82f13db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TurnThisOffWhenPreviewing: {fileID: 0}
+  TargetPosition: {x: 1, y: 3, z: 1}
+  TargetScale: 2
+  previewGameObject: {fileID: 1965786826246966}
+  ActivateInAwake: 1
 --- !u!114 &114269344305056236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1207,52 +1222,6 @@ MonoBehaviour:
   m_circleCount: 6
   m_firstSample: 4
   m_sampleIncrement: 2
---- !u!114 &114685198774718550
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1497906050476966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61beda6c273ec16439fcf70cd82f13db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TurnThisOffWhenPreviewing: {fileID: 0}
-  TargetPosition: {x: 1, y: 1, z: 1}
-  TargetScale: 1
-  previewGameObject: {fileID: 1965786826246966}
-  ActivateInAwake: 1
---- !u!114 &114686276608900300
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1497906050476966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2778ebe0801d9f44af350b2072f093a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heroAsset: {fileID: 11400000, guid: 8f3e82be82034594999b244855d6bce4, type: 2}
-  DefenseText: {fileID: 114062439427458916}
-  ShieldText: {fileID: 114098110345799226}
-  HealthText: {fileID: 114471337912058828}
-  AttackText: {fileID: 114276803395278658}
-  PortraitText: {fileID: 0}
-  SelectorImage: {fileID: 114327519174120676}
-  AvatarImage: {fileID: 114641263815056422}
-  DefenseImage: {fileID: 114334061157477390}
-  AttackImage: {fileID: 114428726101216330}
-  HealthImage: {fileID: 114055623679369250}
-  ShieldImage: {fileID: 114384120958307820}
-  HeroGlow: {fileID: 114198230727359848}
-  HeroPortrait: {fileID: 0}
-  SkillButtons: []
-  SkillCDTexts: []
-  SkillsUI: {fileID: 1710492489571906, guid: 080fa9a639d7feb499b226ce1572e900, type: 2}
-  SkillButton: {fileID: 114152964414741528, guid: 40a23d9205f3ed9478baf92275235378,
-    type: 2}
 --- !u!114 &114712680325370206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1381,6 +1350,36 @@ MonoBehaviour:
   m_circleCount: 6
   m_firstSample: 4
   m_sampleIncrement: 2
+--- !u!114 &114867570264480692
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1497906050476966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2778ebe0801d9f44af350b2072f093a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroAsset: {fileID: 11400000, guid: 8f3e82be82034594999b244855d6bce4, type: 2}
+  DefenseText: {fileID: 114062439427458916}
+  ShieldText: {fileID: 114098110345799226}
+  HealthText: {fileID: 114471337912058828}
+  AttackText: {fileID: 114276803395278658}
+  PortraitText: {fileID: 0}
+  SelectorImage: {fileID: 114327519174120676}
+  AvatarImage: {fileID: 114641263815056422}
+  DefenseImage: {fileID: 114334061157477390}
+  AttackImage: {fileID: 114428726101216330}
+  HealthImage: {fileID: 114055623679369250}
+  ShieldImage: {fileID: 114384120958307820}
+  HeroGlow: {fileID: 114198230727359848}
+  HeroPortrait: {fileID: 0}
+  SkillButtons: []
+  SkillCDTexts: []
+  SkillsUI: {fileID: 1710492489571906, guid: 080fa9a639d7feb499b226ce1572e900, type: 2}
+  SkillButton: {fileID: 114152964414741528, guid: 40a23d9205f3ed9478baf92275235378,
+    type: 2}
 --- !u!114 &114873593323229384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1895,6 +1894,7 @@ RectTransform:
   - {fileID: 224780914124811846}
   - {fileID: 224530975485272282}
   - {fileID: 224953251265950810}
+  - {fileID: 4741131021767456}
   m_Father: {fileID: 4835155563745028}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2058,7 +2058,7 @@ RectTransform:
   m_GameObject: {fileID: 1773229653896224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224987036746412504}
   - {fileID: 224383713751679286}

@@ -115,7 +115,7 @@ public class HeroPreview : MonoBehaviour {
         //ASSIGN VALUES FROM SO
         //Text values
 
-        heroAsset = GetComponentInParent<HeroManager>().heroAsset;
+        heroAsset = GetComponentInParent<HeroManagerTest>().heroAsset;
 
         //this.name = heroAsset.heroName;
         DefenseText.text = heroAsset.defense.ToString();
